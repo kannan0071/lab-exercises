@@ -6,6 +6,10 @@ To implement the Diffie-Hellman Key Exchange algorithm using C language.
 
 Diffie–Hellman Key Exchange establishes a shared secret between two parties that can be used for secret communication for exchanging data over a public network. It is primarily used as a method of exchanging cryptography keys for use in symmetric encryption algorithms like AES. The algorithm in itself is very simple. The process begins by having the two parties, Alice and Bob. Let's assume that Alice wants to establish a shared secret with Bob.
 
+##EXAMPLE:
+
+![Screenshot 2024-04-10 130228](https://github.com/kannan0071/lab-exercises/assets/119641638/0f2cc61f-20a8-4778-89c1-7ad1dda884a0)
+
 ##ALGORITHM:
 
 STEP-1: Both Alice and Bob shares the same public keys g and p.
@@ -61,7 +65,8 @@ void main()
 ```
 ##OUTPUT:
 
-![image](https://github.com/kannan0071/lab-exercises/assets/119641638/993f4e18-cddd-4695-ae9a-98b30f2f2092)
+![image](https://github.com/kannan0071/lab-exercises/assets/119641638/d11280eb-6564-41da-a530-50e0be85eef0)
+
 
 ##RESULT:
 
