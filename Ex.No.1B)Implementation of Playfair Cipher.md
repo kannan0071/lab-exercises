@@ -26,36 +26,27 @@ STEP-5: Display the obtained cipher text.
 #include<ctype.h>
 #define MX 5
 
-void playfair(char ch1, char ch2, char key[MX][MX], FILE *out) 
-{
+void playfair(char ch1, char ch2, char key[MX][MX], FILE *out) {
     int i, j, w, x, y, z;
 
-    for (i = 0; i < MX; i++) 
-	{
-        for (j = 0; j < MX; j++) 
-		{
-            if (ch1 == key[i][j]) 
-			{
+    for (i = 0; i < MX; i++) {
+        for (j = 0; j < MX; j++) {
+            if (ch1 == key[i][j]) {
                 w = i;
                 x = j;
-            } 
-			else if (ch2 == key[i][j]) 
-			{
+            } else if (ch2 == key[i][j]) {
                 y = i;
                 z = j;
             }
         }
     }
 
-    if (x == z) 
-	{
+    if (x == z) {
         x = (x + 1) % 5;
         z = (z + 1) % 5;
         printf("%c%c", key[w][x], key[y][z]);
         fprintf(out, "%c%c", key[w][x], key[y][z]);
-    } 
-	else 
-	{
+    } else {
         w = (w + 1) % 5;
         y = (y + 1) % 5;
         printf("%c%c", key[w][x], key[y][z]);
@@ -64,8 +55,8 @@ void playfair(char ch1, char ch2, char key[MX][MX], FILE *out)
         fprintf(out, "%c%c", key[w][z], key[y][x]);
     }
 }
-int main() 
-{
+
+int main() {
     int i, j, k = 0, l, m = 0, n;
     char key[MX][MX], keyminus[25], keystr[10], str[25] = {0};
     char alpa[26] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
@@ -77,42 +68,35 @@ int main()
     fgets(str, sizeof(str), stdin);
 
     n = strlen(keystr);
-    for (i = 0; i < n; i++) 
-	{
+    for (i = 0; i < n; i++) {
         if (keystr[i] == 'j' || keystr[i] == 'J')
             keystr[i] = 'I';
         keystr[i] = toupper(keystr[i]);
     }
 
-    for (i = 0; i < strlen(str); i++) 
-	{
+    for (i = 0; i < strlen(str); i++) {
         if (str[i] == 'j' || str[i] == 'J')
             str[i] = 'I';
         str[i] = toupper(str[i]);
     }
 
     j = 0;
-    for (i = 0; i < 26; i++) 
-	{
-        for (k = 0; k < n; k++) 
-		{
+    for (i = 0; i < 26; i++) {
+        for (k = 0; k < n; k++) {
             if (keystr[k] == alpa[i])
                 break;
             else if (alpa[i] == 'J')
                 break;
         }
-        if (k == n) 
-		{
+        if (k == n) {
             keyminus[j] = alpa[i];
             j++;
         }
     }
 
     k = 0;
-    for (i = 0; i < MX; i++) 
-	{
-        for (j = 0; j < MX; j++) 
-		{
+    for (i = 0; i < MX; i++) {
+        for (j = 0; j < MX; j++) {
             if (k < n)
                 key[i][j] = keystr[k++];
             else
@@ -124,14 +108,12 @@ int main()
 
     printf("\nEntered text: %s\nCipher Text: ", str);
     out = fopen("cipher.txt", "a+");
-    if (out == NULL) 
-	{
+    if (out == NULL) {
         printf("File Corrupted.");
         return 1;
     }
 
-    for (i = 0; i < strlen(str); i++) 
-	{
+    for (i = 0; i < strlen(str); i++) {
         if (str[i] == 'J')
             str[i] = 'I';
         if (str[i + 1] == '\0')
@@ -141,13 +123,13 @@ int main()
                 str[i + 1] = 'I';
             if (str[i] == str[i + 1])
                 playfair(str[i], 'X', key, out);
-            else 
-			{
+            else {
                 playfair(str[i], str[i + 1], key, out);
                 i++;
             }
         }
     }
+
     fclose(out);
     return 0;
 }
