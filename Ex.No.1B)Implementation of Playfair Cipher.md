@@ -10,6 +10,7 @@ To encrypt a message, one would break the message into digrams (groups of 2 lett
 4.If the letters are not on the same row or column, replace them with the letters on the same row respectively but at the other pair of corners of the rectangle defined by the original pair.
 
 ##EXAMPLE:
+
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/3e00991e-c11f-40ef-ba73-ba2ca9b06974)
 
 ##ALGORITHM:
