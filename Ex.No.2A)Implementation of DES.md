@@ -1,8 +1,10 @@
-##AIM:
+# Ex.No.2A Implementation of DES
+
+## AIM:
 
 To write a C program to implement Data Encryption Standard (DES) using java Language.
 
-##DESCRIPTION:
+## DESCRIPTION:
 
 DES is a symmetric encryption system that uses 64-bit blocks, 8 bits of which are used for parity checks. The key therefore has a "useful" length of 56 bits, which means that only 56 bits are actually used in the algorithm. The algorithm involves carrying out combinations, substitutions and permutations between the text to be encrypted and the key, while making sure the operations can be performed in both directions. The key is ciphered on 64 bits and made of 16 blocks of 4 bits, generally denoted k1 to k16. Given that "only" 56 bits are actually used for encrypting, there can be 256 different keys.
 
@@ -18,12 +20,12 @@ The main parts of the algorithm are as follows:
 
 ➢Re-joining of the left and right parts then inverse initial permutation.
 
-##EXAMPLE:
+## EXAMPLE:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/56784b89-489e-41d7-b84b-23da0c58c69c)
 
 
-##ALGORITHM:
+## ALGORITHM:
 
 STEP-1: Read the 64-bit plain text.
 
@@ -35,7 +37,7 @@ STEP-4: The output obtained is stored as the second 32-bit sequence and the orig
 
 STEP-5: Thus the encrypted 64-bit cipher text is obtained in this way. Repeat the same process for the remaining plain text characters.
 
-##PROGRAM:
+## PROGRAM:
 ```java
 
 import javax.swing.*;
@@ -118,7 +120,7 @@ public class DES {
     }
 }
 ```
-##OUTPUT:
+## OUTPUT:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/ffedddc1-f748-432c-9c1c-587a7419b946)
 
@@ -126,7 +128,7 @@ public class DES {
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/f81b0c92-d241-4e09-92ae-ddf0de40974f)
 
-##RESULT:
+## RESULT:
 
 Thus the data encryption standard algorithm had been implemented successfully using java language.
 
