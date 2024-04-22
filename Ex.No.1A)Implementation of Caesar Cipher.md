@@ -1,16 +1,16 @@
-##AIM:
+## AIM:
 
 To implement the simple substitution technique named Caesar cipher using C language.
 
-##DESCRIPTION:
+## DESCRIPTION:
 
   To encrypt a message with a Caesar cipher, each letter in the message is changed using a simple rule: shift by three. Each letter is replaced by the letter three letters ahead in the alphabet. A becomes D, B becomes E, and so on. For the last letters, we can think of the alphabet as a circle and "wrap around". W becomes Z, X becomes A, Y bec mes B, and Z becomes C. To change a message back, each letter is replaced by the one three before it.
 
-##EXAMPLE:
+## EXAMPLE:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/92cd1858-e34c-47ed-bab7-52d3e24e7e23)
 
-##ALGORITHM:
+## ALGORITHM:
 
 STEP-1: Read the plain text from the user.
 
@@ -22,7 +22,7 @@ STEP-4: Else subtract the key from the plain text.
 
 STEP-5: Display the cipher text obtained above.
 
-##PROGRAM:
+## PROGRAM:
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -62,11 +62,11 @@ void main()
     getch();
 }
 ```
-##OUTPUT:
+## OUTPUT:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/993f4e18-cddd-4695-ae9a-98b30f2f2092)
 
-##RESULT:
+## RESULT:
 
 Thus the implementation of Caesar cipher had been executed successfully.
 
