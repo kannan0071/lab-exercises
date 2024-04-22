@@ -1,8 +1,8 @@
-##AIM:
+## AIM:
 
 To write a C program to implement the RSA encryption algorithm.
 
-##DESCRIPTION:
+## DESCRIPTION:
 
   RSA is an algorithm used by modern computers to encrypt and decrypt messages. It is an asymmetric cryptographic algorithm. Asymmetric means that there are two different keys. This is also called public key cryptography, because one of them can be given to everyone. A basic principle behind RSA is the observation that it is practical to find three very large positive integers e, d and n such that with modular   exponentiation for   all integer m:
 
@@ -10,12 +10,12 @@ To write a C program to implement the RSA encryption algorithm.
 
 The public key is represented by the integers n and e; and, the private key, by the integer d. m represents the message. RSA involves a public key and a private key. The public key can be known by everyone and is used for encrypting messages. The intention is that messages encrypted with the public key can only be decrypted in a reasonable amount of time using the private key.
 
-##EXAMPLE:
+## EXAMPLE:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/e80b3494-ff16-4c1f-8389-63821e4d672d)
 
 
-##ALGORITHM:
+## ALGORITHM:
 
 STEP-1: Select two co-prime numbers as p and q.
 
@@ -31,7 +31,7 @@ STEP-6: The cipher text is computed as messagee * mod n.
 
 STEP-7: Decryption is done as cipherdmod n.
 
-##PROGRAM:
+## PROGRAM:
 ```c
 #include<stdio.h>
 #include<conio.h>
@@ -172,12 +172,12 @@ void decrypt()
         printf("%c",m[i]);
 }
 ```
-##OUTPUT:
+## OUTPUT:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/1f5334a4-d8df-4451-b274-aff3c8f6436b)
 
 
-##RESULT:
+## RESULT:
 
 Thus the C program to implement RSA encryption technique had been implemented successfully.
 
