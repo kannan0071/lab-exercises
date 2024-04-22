@@ -1,8 +1,10 @@
-##AIM:
+# Ex.No.1B Implementation of Playfair Cipher 
+
+## AIM:
 
 To write a C program to implement the Playfair Substitution technique.
 
-##DESCRIPTION:
+## DESCRIPTION:
 
  The Playfair cipher starts with creating a key table. The key table is a 5×5 grid of letters that will act as the key for encrypting your plaintext. Each of the 25 letters must be unique and one letter of the alphabet is omitted from the table (as there are 25 spots and 26 letters in the alphabet).
  
@@ -16,11 +18,11 @@ To encrypt a message, one would break the message into digrams (groups of 2 lett
 
 4.If the letters are not on the same row or column, replace them with the letters on the same row respectively but at the other pair of corners of the rectangle defined by the original pair.
 
-##EXAMPLE:
+## EXAMPLE:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/3e00991e-c11f-40ef-ba73-ba2ca9b06974)
 
-##ALGORITHM:
+## ALGORITHM:
 
 STEP-1: Read the plain text from the user.
 
@@ -32,7 +34,7 @@ STEP-4: Group the plain text in pairs and match the corresponding corner letters
 
 STEP-5: Display the obtained cipher text.
 
-##PROGRAM:
+## PROGRAM:
 ```c
 #include<stdio.h>
 #include<string.h>
@@ -148,11 +150,11 @@ int main() {
 }
 
 ```
-##OUTPUT:
+## OUTPUT:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/92b414de-c241-4da3-8d70-5ad6d499c258)
 
-##RESULT:
+## RESULT:
 
 Thus the Playfair cipher substitution technique had been implemented successfully.
 
