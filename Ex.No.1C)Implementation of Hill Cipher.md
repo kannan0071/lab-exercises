@@ -1,17 +1,19 @@
-##AIM:
+# Ex.No.1C)Implementation of Hill Cipher
+
+## AIM:
 
 To write a C program to implement the hill cipher substitution techniques.
 
-##DESCRIPTION:
+## DESCRIPTION:
 
  Each letter is represented by a number modulo 26. Often the simple scheme A = 0, B= 1... Z = 25, is used, but this is not an essential feature of the cipher. To encrypt a message, each block of n letters is multiplied by an invertible n × n matrix, against modulus 26. To
 decrypt the message, each block is multiplied by the inverse of the m trix used for encryption. The matrix used for encryption is the cipher key, and it should be chosen randomly from the set of invertible n × n matrices (modulo 26).
 
-##EXAMPLE:
+## EXAMPLE:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/42b2ca42-07d9-448f-82ba-c9f1b53a2475)
 
-##ALGORITHM:
+## ALGORITHM:
 
 STEP-1: Read the plain text and key from the user. 
 
@@ -23,7 +25,7 @@ STEP-4: Multiply the two matrices to obtain the cipher text of length three.
 
 STEP-5: Combine all these groups to get the complete cipher text.
 
-##PROGRAM:
+## PROGRAM:
 ```c
 #include<stdio.h>
 #include<conio.h>
@@ -75,10 +77,10 @@ int main()
     return 0;
 }
 ```
-##OUTPUT:
+## OUTPUT:
 
 ![image](https://github.com/kannan0071/lab-exercises/assets/119641638/79fc07a4-1d81-4f27-b746-c45aa4f87c68)
 
-##RESULT:
+## RESULT:
 
 Thus the hill cipher substitution technique had been implemented successfully in C.
