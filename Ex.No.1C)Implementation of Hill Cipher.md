@@ -1,4 +1,4 @@
-# Ex.No.1C)Implementation of Hill Cipher
+# Ex.No.1C Implementation of Hill Cipher
 
 ## AIM:
 
